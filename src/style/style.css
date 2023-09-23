@@ -271,7 +271,7 @@ main
 }
 .main section p {
   font-size: 0.8rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-weight: 400;
   margin-top: 20px;
   letter-spacing: 0.1rem;
@@ -397,12 +397,12 @@ main
   overflow: hidden;
 }
 .main .store .store-block .store-block__body .store-block__name {
-  padding-top: 8px;
+  padding-top: 5px;
   text-align: left;
   font-size: 0.8rem;
 }
 .main .store .store-block .store-block__body .store-block__text {
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 0.9rem;
