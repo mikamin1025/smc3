@@ -271,8 +271,8 @@ main
 }
 .main section p {
   font-size: 0.8rem;
-  line-height: 2.3rem;
-  font-weight: 600;
+  line-height: 2rem;
+  font-weight: 400;
   margin-top: 20px;
   letter-spacing: 0.1rem;
   text-align: left;
@@ -301,12 +301,15 @@ main
 }
 .main .next-event .next-event-block .next-event-block__day {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 .main .next-event .next-event-block .next-event-block__time {
   line-height: 1.3rem;
+  font-weight: 600;
 }
 .main .next-event .next-event-block .next-event-block__place {
   line-height: 1.3rem;
+  font-weight: 600;
 }
 .main .next-event .next-event-block .next-event-block__topleft {
   position: absolute;

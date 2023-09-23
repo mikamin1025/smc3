@@ -75,10 +75,10 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
         <span class="next-event-block__bottomleft"></span>
         <!-- <p class="next-event-block__day">2023.10.25 wed</p> -->
         <p class="next-event-block__day">
-          {new Date(eventDate.contents[0].start_date).getUTCFullYear()}.{
-            new Date(eventDate.contents[0].start_date).getUTCMonth() + 1
-          }.{new Date(eventDate.contents[0].start_date).getUTCDate()}&nbsp;{
-            WeekChars[new Date(eventDate.contents[0].start_date).getDay()]
+          {new Date(eventDate.contents[0].start).getUTCFullYear()}.{
+            new Date(eventDate.contents[0].start).getUTCMonth() + 1
+          }.{new Date(eventDate.contents[0].start).getUTCDate()}&nbsp;{
+            WeekChars[new Date(eventDate.contents[0].start).getDay()]
           }
         </p>
         <p class="next-event-block__time">
