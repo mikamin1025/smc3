@@ -271,7 +271,7 @@ main
 }
 .main section p {
   font-size: 0.8rem;
-  line-height: 2rem;
+  line-height: 2.3rem;
   font-weight: 400;
   margin-top: 20px;
   letter-spacing: 0.1rem;
@@ -392,7 +392,7 @@ main
 }
 .main .store .store-block .store-block__body {
   width: 90%;
-  height: 100px;
+  height: 95px;
   margin: 0 auto;
   overflow: hidden;
 }
