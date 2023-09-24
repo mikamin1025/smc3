@@ -2,7 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import StoreDetail from "../components/StoreDetail.astro";
 
+import { getImgs } from "../libs/microcms";
 import { getEvnetDate } from "../libs/microcms";
+
+//microCMSの呼び出し（画像データを一括して取得
+const images = await getImgs({ fields: ["number", "img"] });
 //microCMSの呼び出し（idとtitleを取得する）
 const eventDate = await getEvnetDate({ fields: ["start", "end", "place"] });
 
@@ -33,10 +37,14 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
     </div>
 
     <div class="header-mv-field">
-      <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
+      {
+        images.contents.map((image: any) => (
+        <img class="header-mv" src={image.img.url} alt="メイン画像" />
+        ))}
+      <!-- <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
       <img class="header-mv" src="images/mv2.jpg" alt="メイン画像" />
       <img class="header-mv" src="images/mv3.jpg" alt="メイン画像" />
-      <img class="header-mv" src="images/mv4.jpg" alt="メイン画像" />
+      <img class="header-mv" src="images/mv4.jpg" alt="メイン画像" /> -->
     </div>
 
     <div class="header-overlay"></div>
@@ -52,12 +60,6 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
         </p>
         <p class="about-block__text">
           出店者さんの多くは出雲市内の農家さんや食に関わっている方々で、CiBOのメンバー自ら出店してもらえる生産者さんと直接やり取りを行い、信頼関係を築きながら、安心安全なものを提供いただいております。
-        </p>
-        <p class="about-block__text">
-          イベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキスト
-        </p>
-        <p class="about-block__text">
-          イベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキストイベント概要テキスト
         </p>
         <img
           class="about-block__img"
@@ -83,15 +85,13 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
         </p>
         <p class="next-event-block__time">
           {new Date(eventDate.contents[0].start).getUTCHours() + 9}&#058;{
-            (
-              "0" + new Date(eventDate.contents[0].start).getUTCMinutes()
-            ).slice(-2)
-          }&mdash;{
-            new Date(eventDate.contents[0].end).getUTCHours() + 9
-          }&#058;{
-            (
-              "0" + new Date(eventDate.contents[0].end).getUTCMinutes()
-            ).slice(-2)
+            ("0" + new Date(eventDate.contents[0].start).getUTCMinutes()).slice(
+              -2
+            )
+          }&mdash;{new Date(eventDate.contents[0].end).getUTCHours() + 9}&#058;{
+            ("0" + new Date(eventDate.contents[0].end).getUTCMinutes()).slice(
+              -2
+            )
           }
         </p>
         <p class="next-event-block__place">{eventDate.contents[0].place}</p>
