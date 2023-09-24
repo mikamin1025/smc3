@@ -229,9 +229,10 @@ header
     /*描画位置※位置は適宜調整してください*/
     position: absolute;
     bottom: 1%;
-    right: 50%;
+    // right: 50%;
+    right: 5%;
     /*矢印の動き1秒かけて永遠にループ*/
-    animation: arrowmove 1.5s ease-in-out infinite;
+    animation: arrowmove 2.0s ease-in-out infinite;
     z-index: 29;
   }
 
@@ -257,7 +258,8 @@ header
     left: -20px;
     bottom: 10px;
     /*テキストの形状*/
-    color: #333;
+    // color: #333;
+    color: #125135;
     font-size: 0.7rem;
     letter-spacing: 0.05em;
     /*縦書き設定*/
@@ -276,7 +278,8 @@ header
     /*矢印の形状*/
     width: 1px;
     height: 20px;
-    background: #555;
+    // background: #555;
+    background-color: #125135;
     transform: skewX(-31deg);
   }
 
@@ -289,7 +292,8 @@ header
     /*矢印の形状*/
     width: 1px;
     height: 50px;
-    background: #555;
+    // background: #555;
+    background: #125135;
   }
 
   /*========= レイアウトのためのCSS ===============*/
