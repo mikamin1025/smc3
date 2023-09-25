@@ -4,11 +4,14 @@ import StoreDetail from "../components/StoreDetail.astro";
 
 import { getImgs } from "../libs/microcms";
 import { getEvnetDate } from "../libs/microcms";
+import { getStores } from "../libs/microcms";
 
-//microCMSの呼び出し（画像データを一括して取得
-const images = await getImgs({ fields: ["number", "img"] });
-//microCMSの呼び出し（idとtitleを取得する）
-const eventDate = await getEvnetDate({ fields: ["start", "end", "place"] });
+//microCMSの呼び出し(画像データを一括して取得)
+const images = await getImgs({});
+//microCMSの呼び出し（開催日時、場所を取得）
+const eventDate = await getEvnetDate({});
+//microCMSの呼び出し（お店情報を取得）
+const stores = await getStores({});
 
 // ■変数
 // 曜日を表す文字列の配列を作っておく
@@ -39,8 +42,9 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
     <div class="header-mv-field">
       {
         images.contents.map((image: any) => (
-        <img class="header-mv" src={image.img.url} alt="メイン画像" />
-        ))}
+          <img class="header-mv" src={image.img.url} alt="メイン画像" />
+        ))
+      }
       <!-- <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
       <img class="header-mv" src="images/mv2.jpg" alt="メイン画像" />
       <img class="header-mv" src="images/mv3.jpg" alt="メイン画像" />
@@ -99,102 +103,30 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
     </section>
     <section id="store" class="store">
       <h2>STORES</h2>
+
       <div class="store-container">
-        <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt="店の画像"
-            class="store-block__img"
-          />
-          <div class="store-block__body">
-            <h3 class="store-block__name">THE COFFEE SHOP</h3>
-            <p class="store-block__text">
-              こんにちは。THE COFFEE SHOPにぜひお越しください。こんにちは。THE
-              COFFEE SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。
-            </p>
-          </div>
-        </div>
-
-        <StoreDetail />
-
-        <!-- 後から消すエリア↓↓ -->
-        <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt="お店のイメージ画像"
-            class="store-block__img"
-          />
-          <div class="store-block__body">
-            <h3 class="store-block__name">THE COFFEE SHOP</h3>
-            <p class="store-block__text">
-              こんにちは。THE COFFEE SHOPにぜひお越しください。こんにちは。THE
-              COFFEE SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。
-            </p>
-          </div>
-        </div>
-        <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt="お店のイメージ画像"
-            class="store-block__img"
-          />
-          <div class="store-block__body">
-            <h3 class="store-block__name">THE COFFEE SHOP</h3>
-            <p class="store-block__text">
-              こんにちは。THE COFFEE SHOPにぜひお越しください。こんにちは。THE
-              COFFEE SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。
-            </p>
-          </div>
-        </div>
-        <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt="お店のイメージ画像"
-            class="store-block__img"
-          />
-          <div class="store-block__body">
-            <h3 class="store-block__name">THE COFFEE SHOP</h3>
-            <p class="store-block__text">
-              こんにちは。THE COFFEE SHOPにぜひお越しください。こんにちは。THE
-              COFFEE SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。
-            </p>
-          </div>
-        </div>
-        <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt="お店のイメージ画像"
-            class="store-block__img"
-          />
-          <div class="store-block__body">
-            <h3 class="store-block__name">THE COFFEE SHOP</h3>
-            <p class="store-block__text">
-              こんにちは。THE COFFEE SHOPにぜひお越しください。こんにちは。THE
-              COFFEE SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。こんにちは。THE COFFEE
-              SHOPにぜひお越しください。
-            </p>
-          </div>
-        </div>
-        <!-- 後から消すエリア↑↑ -->
+        {
+          stores.contents.map((store: any) => (
+            <>
+              <div class="store-block">
+                <img
+                  src={store.store_img.url}
+                  alt="店の画像"
+                  class="store-block__img"
+                />
+                <div class="store-block__body">
+                  <h3 class="store-block__name">{store.store_name}</h3>
+                  <p class="store-block__text">{store.store_detail}</p>
+                </div>
+              </div>
+              <StoreDetail
+                img={store.store_img.url}
+                name={store.store_name}
+                detail={store.store_detail}
+              />
+            </>
+          ))
+        }
       </div>
     </section>
     <section id="parking" class="parking">

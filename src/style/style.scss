@@ -1,8 +1,12 @@
 @charset "utf-8";
 $border-radius: 20px;
 
-html {scroll-behavior: smooth;}
-h1, h2 {
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -24,7 +28,7 @@ header
       font-size: 1.7rem;
       padding-left: 20px;
       z-index: 50;
-      
+
     }
 
     /*========= レイアウトのためのCSS ===============*/
@@ -162,7 +166,7 @@ header
       animation: anime 24s 0s infinite;
       z-index: -1;
 
-      
+
       &:nth-of-type(2) {
         -webkit-animation-delay: 6s;
         animation-delay: 6s;
@@ -193,9 +197,11 @@ header
       0% {
         opacity: 0;
       }
+
       20% {
         opacity: 1;
       }
+
       43% {
         opacity: 0;
         // transform: scale(1.2) ;
@@ -539,6 +545,12 @@ main
           margin-top: 10px;
           font-weight: 400;
           line-height: 1.3rem;
+          font-size: 0.8rem;
+          line-height: 1.8rem;
+          font-weight: 400;
+          // margin-top: 20px;
+          letter-spacing: 0.1rem;
+          text-align: left;
         }
 
       }
