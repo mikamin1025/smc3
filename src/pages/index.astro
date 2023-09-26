@@ -179,27 +179,32 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
   <script>
     const humburger = document.querySelector(".header-top__hamburger");
     const menu = document.querySelector(".header-top__menu");
-    humburger.addEventListener("click", () => {
-      humburger.classList.toggle("active");
-      menu.classList.toggle("is-active");
-    });
-    menu.addEventListener("click", () => {
-      humburger.classList.remove("active");
-      menu.classList.remove("is-active");
-    });
+    if(humburger !== null && menu !== null){
+      humburger.addEventListener("click", () => {
+        humburger.classList.toggle("active");
+        menu.classList.toggle("is-active");
+      });
+      menu.addEventListener("click", () => {
+        humburger.classList.remove("active");
+        menu.classList.remove("is-active");
+      });
+    }
 
     const stores = document.querySelectorAll(".store-block");
     const detail = document.querySelector(".store-detail");
-    const back = document.querySelector(".store-detail-back");
-    stores.forEach((store) => {
-      store.addEventListener("click", () => {
-        detail.classList.add("is-active");
+    // const back = document.querySelector(".store-detail-back");
+
+    if(detail !== null){
+      stores.forEach((store) => {
+        store.addEventListener("click", () => {
+          detail.classList.add("is-active");
+        });
       });
-    });
-    // back or detailをトリガーにする
-    detail.addEventListener("click", () => {
-      detail.classList.remove("is-active");
-    });
+      // back or detailをトリガーにする
+      detail.addEventListener("click", () => {
+        detail.classList.remove("is-active");
+      });
+    }
   </script>
   <!-- gsapアニメーション -->
   <script
