@@ -1,8 +1,9 @@
 ---
-const { name, img, detail } = Astro.props;
+const { name, img, detail, index } = Astro.props;
+const className = "store-detail" + " " + "detail" + index;
 ---
 
-<div class="store-detail">
+<div class={className}>
   <div class="store-detail-block">
     <h3 class="store-detail__title">STORES</h3>
     <p class="store-detail-back">◀ BACK</p>

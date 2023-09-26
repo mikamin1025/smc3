@@ -103,10 +103,9 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
     </section>
     <section id="store" class="store">
       <h2>STORES</h2>
-
       <div class="store-container">
         {
-          stores.contents.map((store: any) => (
+          stores.contents.map((store: any, index: any) => (
             <>
               <div class="store-block">
                 <img
@@ -123,6 +122,7 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
                 img={store.store_img.url}
                 name={store.store_name}
                 detail={store.store_detail}
+                index={index}
               />
             </>
           ))
@@ -179,7 +179,7 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
   <script>
     const humburger = document.querySelector(".header-top__hamburger");
     const menu = document.querySelector(".header-top__menu");
-    if(humburger !== null && menu !== null){
+    if (humburger !== null && menu !== null) {
       humburger.addEventListener("click", () => {
         humburger.classList.toggle("active");
         menu.classList.toggle("is-active");
@@ -191,18 +191,27 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
     }
 
     const stores = document.querySelectorAll(".store-block");
-    const detail = document.querySelector(".store-detail");
+    const details = document.querySelectorAll(".store-detail");
     // const back = document.querySelector(".store-detail-back");
 
-    if(detail !== null){
-      stores.forEach((store) => {
-        store.addEventListener("click", () => {
-          detail.classList.add("is-active");
-        });
+    if (details !== null) {
+      stores.forEach((store, index) => {
+        for (let i = 0; i <= index; i++) {
+          if (index === i) {
+            const target = document.querySelector(".detail" + i);
+            if (target !== null) {
+              store.addEventListener("click", () => {
+                target.classList.add("is-active");
+              });
+            }
+          }
+        }
       });
       // back or detailをトリガーにする
-      detail.addEventListener("click", () => {
-        detail.classList.remove("is-active");
+      details.forEach((detail) => {
+        detail.addEventListener("click", () => {
+          detail.classList.remove("is-active");
+        });
       });
     }
   </script>
