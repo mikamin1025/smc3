@@ -16,6 +16,11 @@ const stores = await getStores({});
 // ■変数
 // 曜日を表す文字列の配列を作っておく
 var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
+
+//ランダムの値を取得
+const min = 1; // 最小値を指定
+const max = 5; // 最大値を指定
+let num = Math.floor(Math.random() * (max + 1 - min)) + min;
 ---
 
 <Layout title="SUNDAY MARKET CiBO">
@@ -29,11 +34,51 @@ var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
         <span></span><span></span><span></span>
       </div>
       <div class="header-top__menu">
-        <img
-          class="header-top__menu-img"
-          src="images/tomato.png"
-          alt="野菜の画像"
-        />
+        {
+          num === 1 && (
+            <img
+              class="header-top__menu-img"
+              src="images/tomato.png"
+              alt="トマトのイラスト"
+            />
+          )
+        }
+        {
+          num === 2 && (
+            <img
+              class="header-top__menu-img"
+              src="images/carrot.png"
+              alt="にんじんのイラスト"
+            />
+          )
+        }
+        {
+          num === 3 && (
+            <img
+              class="header-top__menu-img"
+              src="images/greenpepper.png"
+              alt="ピーマンのイラスト"
+            />
+          )
+        }
+        {
+          num === 4 && (
+            <img
+              class="header-top__menu-img"
+              src="images/potato.png"
+              alt="ジャガイモのイラスト"
+            />
+          )
+        }
+        {
+          num === 5 && (
+            <img
+              class="header-top__menu-img"
+              src="images/vegetables.png"
+              alt="野菜のイラスト"
+            />
+          )
+        }
 
         <div class="header-top__menu-item"><a href="#about">ABOUT</a></div>
         <div class="header-top__menu-item">
