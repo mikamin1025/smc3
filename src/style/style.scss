@@ -112,6 +112,9 @@ header
       justify-content: center;
       background: #ede3da;
 
+      & .header-top__menu-img {
+        width: 60%;
+      }
       & .header-top__menu-item {
         width: 100%;
         height: auto;
@@ -239,8 +242,8 @@ header
     /*描画位置※位置は適宜調整してください*/
     position: absolute;
     bottom: 1%;
-    // right: 50%;
-    right: 5%;
+    right: 50%;
+    // right: 5%;
     /*矢印の動き1秒かけて永遠にループ*/
     animation: arrowmove 2.0s ease-in-out infinite;
     z-index: 29;
@@ -541,6 +544,7 @@ main
           object-fit: cover;
           background-position: center center;
           border-radius: 20px;
+          border: 1px solid #999;
         }
 
         & .store-detail__name {
