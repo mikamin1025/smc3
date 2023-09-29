@@ -454,10 +454,11 @@ main
 }
 .main .store .store-detail .store-detail-block .store-detail__name {
   text-align: left;
-  margin-top: 10px;
-  font-size: 1.2rem;
+  margin-top: 25px;
+  font-size: 1.4rem;
 }
 .main .store .store-detail .store-detail-block .store-detail__text {
+  margin-top: 5px;
   padding-bottom: 50px;
   font-weight: 400;
   line-height: 1rem;
