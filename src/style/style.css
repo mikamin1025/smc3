@@ -279,7 +279,7 @@ main
 .main section p {
   font-size: 0.8rem;
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 20px;
   letter-spacing: 0.1rem;
   text-align: justify;
@@ -458,10 +458,9 @@ main
   font-size: 1.2rem;
 }
 .main .store .store-detail .store-detail-block .store-detail__text {
-  margin-top: 10px;
   padding-bottom: 50px;
   font-weight: 400;
-  line-height: 1.3rem;
+  line-height: 1rem;
   font-size: 0.8rem;
   line-height: 1.3rem;
   font-weight: 400;
