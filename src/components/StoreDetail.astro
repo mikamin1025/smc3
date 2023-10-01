@@ -9,7 +9,22 @@ const className = "store-detail" + " " + "detail" + index;
     <p class="store-detail-back">◀ BACK</p>
     <img src={img} alt="店の画像" class="store-detail__img" />
     <h4 class="store-detail__name">{name}</h4>
-    <div  class="store-detail__text" set:html={detail}></div>
+    <div class="store-detail__text" set:html={detail}></div>
+    <div class="store-detail__contact">
+      <hr>
+      <p class="store-detai__address">住所:出雲市平田町123-4</p>
+      <p class="store-detai__tel">tel:080-4512-2314</p>
+      <p class="store-detai__mail">mail:<mail>hogehoge@gmail.com</mail></p>
+      <div class="store-detail__sns">
+        <a href="https://www.instagram.com/sundaymarketcibo/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/sundaymarketcibo/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.instagram.com/sundaymarketcibo/"><i class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+
+
+      
+      <hr>
+    </div>
     
   </div>
 </div>

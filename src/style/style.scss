@@ -520,6 +520,7 @@ main
       justify-content: center;
       background: #ede3da;
       overflow-y: scroll;
+      overflow-x: hidden;
 
       & .store-detail-block {
         // background-color: pink;
@@ -556,11 +557,10 @@ main
 
         & .store-detail__text {
           margin-top: 20px;
-          padding-bottom: 50px;
+          padding-bottom: 20px;
 
           & p {
-
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             line-height: 1.7rem;
             font-weight: 400;
             letter-spacing: 0.1rem;
@@ -568,6 +568,23 @@ main
           }
         }
 
+        & .store-detail__contact {
+          width: 100%;
+          padding-bottom: 30px;
+          & P {
+            margin-top: 0px;
+            line-height: 1.2rem;            
+          }
+          & .store-detail__sns {
+            display: flex;
+            justify-content: left;
+            & a {
+              margin-top: 10px;
+              margin-right: 20px;
+              font-size: 1.5rem;
+            }
+          }
+        }
       }
 
     }

@@ -430,6 +430,7 @@ main
   justify-content: center;
   background: #ede3da;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .main .store .store-detail .store-detail-block {
   width: 90%;
@@ -460,14 +461,31 @@ main
 }
 .main .store .store-detail .store-detail-block .store-detail__text {
   margin-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 .main .store .store-detail .store-detail-block .store-detail__text p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.7rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   text-align: justify;
+}
+.main .store .store-detail .store-detail-block .store-detail__contact {
+  width: 100%;
+  padding-bottom: 30px;
+}
+.main .store .store-detail .store-detail-block .store-detail__contact P {
+  margin-top: 0px;
+  line-height: 1.2rem;
+}
+.main .store .store-detail .store-detail-block .store-detail__contact .store-detail__sns {
+  display: flex;
+  justify-content: left;
+}
+.main .store .store-detail .store-detail-block .store-detail__contact .store-detail__sns a {
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 1.5rem;
 }
 .main .store .store-detail {
   transform: translateX(100vw);
