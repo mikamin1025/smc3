@@ -396,6 +396,7 @@ main
      object-fit: cover;
   background-position: center center;
   border-radius: 20px;
+  border: 1px solid #125135;
 }
 .main .store .store-block .store-block__body {
   width: 90%;
