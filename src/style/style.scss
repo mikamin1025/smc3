@@ -116,6 +116,7 @@ header
         width: 60%;
         padding-top: 20%;
       }
+
       & .header-top__menu-item {
         width: 100%;
         height: auto;
@@ -549,20 +550,22 @@ main
 
         & .store-detail__name {
           text-align: left;
-          margin-top: 25px;
+          margin-top: 20px;
           font-size: 1.4rem;
         }
 
         & .store-detail__text {
-          margin-top: 5px;
+          margin-top: 20px;
           padding-bottom: 50px;
-          font-weight: 400;
-          line-height: 1.0rem;
-          font-size: 0.8rem;
-          line-height: 1.3rem;
-          font-weight: 400;
-          letter-spacing: 0.1rem;
-          text-align: justify;
+
+          & p {
+
+            font-size: 0.9rem;
+            line-height: 1.7rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            text-align: justify;
+          }
         }
 
       }
