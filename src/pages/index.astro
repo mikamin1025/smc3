@@ -166,13 +166,22 @@ let num = Math.floor(Math.random() * (max + 1 - min)) + min;
                 />
                 <div class="store-block__body">
                   <h3 class="store-block__name">{store.store_name}</h3>
-                  <p class="store-block__text" set:html={store.store_detail.replace(/<([^>]+)>/g,'')}></p>
+                  <p
+                    class="store-block__text"
+                    set:html={store.store_detail.replace(/<([^>]+)>/g, "")}
+                  />
                 </div>
               </div>
               <StoreDetail
                 img={store.store_img.url}
                 name={store.store_name}
                 detail={store.store_detail}
+                address={store.store_address}
+                tel={store.store_tel}
+                mail={store.store_mail}
+                instagram={store.store_instagram}
+                facebook={store.store_facebook}
+                X={store.store_X}
                 index={index}
               />
             </>

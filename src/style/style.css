@@ -265,6 +265,11 @@ main
   /*
   store----------------------------------------------------
   */
+  /*----------------------------
+    * アニメーション部分
+    *----------------------------*/
+  /* アニメーション前のメニューの状態 */
+  /* アニメーション後のメニューの状態 */
   /*
   parking----------------------------------------------------
   */
@@ -371,11 +376,6 @@ main
   /*----------------------------
   * 店舗詳細画面
   *----------------------------*/
-  /*----------------------------
-  * アニメーション部分
-  *----------------------------*/
-  /* アニメーション前のメニューの状態 */
-  /* アニメーション後のメニューの状態 */
 }
 .main .store h2 {
   padding-top: 30px;
@@ -472,26 +472,27 @@ main
 }
 .main .store .store-detail .store-detail-block .store-detail__contact {
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .main .store .store-detail .store-detail-block .store-detail__contact P {
   margin-top: 0px;
   line-height: 1.2rem;
 }
-.main .store .store-detail .store-detail-block .store-detail__contact .store-detail__sns {
+.main .store .store-detail .store-detail-block .store-detail__sns {
   display: flex;
   justify-content: left;
 }
-.main .store .store-detail .store-detail-block .store-detail__contact .store-detail__sns a {
+.main .store .store-detail .store-detail-block .store-detail__sns a {
   margin-top: 10px;
   margin-right: 20px;
   font-size: 1.5rem;
+  color: #125135;
 }
-.main .store .store-detail {
+.main .store-detail {
   transform: translateX(100vw);
   transition: all 0.2s linear;
 }
-.main .store .store-detail.is-active {
+.main .store-detail.is-active {
   transform: translateX(0);
   border-left: 1px solid #555;
 }

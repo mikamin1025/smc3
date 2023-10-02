@@ -570,41 +570,47 @@ main
 
         & .store-detail__contact {
           width: 100%;
-          padding-bottom: 30px;
+          padding-bottom: 10px;
+
           & P {
             margin-top: 0px;
-            line-height: 1.2rem;            
+            line-height: 1.2rem;
           }
-          & .store-detail__sns {
-            display: flex;
-            justify-content: left;
-            & a {
-              margin-top: 10px;
-              margin-right: 20px;
-              font-size: 1.5rem;
-            }
+        }
+
+        & .store-detail__sns {
+          display: flex;
+          justify-content: left;
+
+          & a {
+            margin-top: 10px;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: #125135;
           }
         }
       }
-
     }
+  }
 
-    /*----------------------------
+
+
+  /*----------------------------
     * アニメーション部分
     *----------------------------*/
 
-    /* アニメーション前のメニューの状態 */
-    & .store-detail {
-      transform: translateX(100vw);
-      transition: all .2s linear;
-    }
-
-    /* アニメーション後のメニューの状態 */
-    & .store-detail.is-active {
-      transform: translateX(0);
-      border-left: 1px solid #555;
-    }
+  /* アニメーション前のメニューの状態 */
+  & .store-detail {
+    transform: translateX(100vw);
+    transition: all .2s linear;
   }
+
+  /* アニメーション後のメニューの状態 */
+  & .store-detail.is-active {
+    transform: translateX(0);
+    border-left: 1px solid #555;
+  }
+
 
   /*
   parking----------------------------------------------------
