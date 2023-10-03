@@ -396,7 +396,6 @@ main
      object-fit: cover;
   background-position: center center;
   border-radius: 20px;
-  border: 1px solid #125135;
 }
 .main .store .store-block .store-block__body {
   width: 90%;
@@ -481,6 +480,7 @@ main
 .main .store .store-detail .store-detail-block .store-detail__sns {
   display: flex;
   justify-content: left;
+  padding-bottom: 50px;
 }
 .main .store .store-detail .store-detail-block .store-detail__sns a {
   margin-top: 10px;

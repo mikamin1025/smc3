@@ -476,7 +476,7 @@ main
         object-fit: cover;
         background-position: center center;
         border-radius: $border-radius;
-        border: 1px solid #125135;
+        // border: 1px solid #125135;
       }
 
       & .store-block__body {
@@ -526,6 +526,7 @@ main
         // background-color: pink;
         width: 90%;
         height: 90vh;
+        
 
         & .store-detail__title {
           font-size: 1.5rem;
@@ -581,6 +582,7 @@ main
         & .store-detail__sns {
           display: flex;
           justify-content: left;
+          padding-bottom: 50px;
 
           & a {
             margin-top: 10px;
