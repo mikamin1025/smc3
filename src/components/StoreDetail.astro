@@ -1,7 +1,19 @@
 ---
-const { name, img, detail, index, address, tel, mail, instagram, facebook, X } =
-  Astro.props;
+
+const {
+  name,
+  img,
+  detail,
+  index,
+  address,
+  tel,
+  mail,
+  instagram = "",
+  facebook = "",
+  X = "",
+} = Astro.props;
 const className = "store-detail" + " " + "detail" + index;
+
 ---
 
 <div class={className}>
@@ -13,23 +25,21 @@ const className = "store-detail" + " " + "detail" + index;
     <div class="store-detail__text" set:html={detail} />
     <div class="store-detail__contact">
       <hr />
-      <p class="store-detai__address">{address}</p>
-      <p class="store-detai__tel">{tel}</p>
-      <p class="store-detai__mail">{mail}</p>
+      <p class="store-detai__address">Address:{address}</p>
+      <p class="store-detai__tel">Tel:{tel}</p>
+      <p class="store-detai__mail">Mail:{mail}</p>
     </div>
     <div class="store-detail__sns">
       {
-        { instagram } !== null && (
+        { instagram } != "" && (
           <a href={instagram}>
-            <i class="fa-brands fa-square-instagram"></i>
-            
+            <i class="fa-brands fa-square-instagram" />
           </a>
         )
       }
-      
-    <a href={facebook}><i class="fa-brands fa-square-facebook" /></i></a>
-    <a href={X}><i class="fa-brands fa-square-x-twitter"></i></a>
+
+      <a href={facebook}><i class="fa-brands fa-square-facebook"></i></a>
+      <a href={X}><i class="fa-brands fa-square-x-twitter"></i></a>
+    </div>
   </div>
-  
-  
 </div>
