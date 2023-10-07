@@ -286,7 +286,6 @@ main
   line-height: 2rem;
   font-weight: 400;
   margin-top: 20px;
-  letter-spacing: 0.1rem;
   text-align: justify;
 }
 .main .about .about-block__img {
@@ -322,6 +321,7 @@ main
 .main .next-event .next-event-block .next-event-block__place {
   line-height: 1.3rem;
   font-weight: 600;
+  letter-spacing: 0.1rem;
 }
 .main .next-event .next-event-block .next-event-block__topleft {
   position: absolute;
@@ -399,7 +399,7 @@ main
 }
 .main .store .store-block .store-block__body {
   width: 90%;
-  height: 95px;
+  height: 165px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -412,7 +412,7 @@ main
   margin-top: 5px;
   font-size: 0.6rem;
   font-weight: 400;
-  line-height: 0.9rem;
+  line-height: 1.1rem;
   letter-spacing: 0.1rem;
   word-wrap: break-word;
 }
