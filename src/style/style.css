@@ -602,4 +602,90 @@ footer
   color: #125135;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+}
+@media screen and (min-width: 960px) {
+  /* 960px以上に適用されるCSS（PC用） */
+  /*****************************************
+  main
+  *******************************************/
+  .main {
+    /*
+    共通設定
+    */
+    width: 70%;
+  }
+  .main section {
+    padding-top: 100px;
+  }
+  .main section h2 {
+    font-size: 2.3rem;
+    padding-bottom: 30px;
+  }
+  .main .about .about-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .about .about-block .about-block__text-block {
+    width: 40%;
+  }
+  .main .about .about-block .about-block__img {
+    width: 50%;
+    height: 50vh;
+    margin-top: 30px;
+  }
+  .main .next-event .next-event-block {
+    height: 30vh;
+  }
+  .main .next-event .next-event-block .next-event-block__topleft {
+    width: 60px;
+    height: 60px;
+  }
+  .main .next-event .next-event-block .next-event-block__topright {
+    width: 60px;
+    height: 60px;
+  }
+  .main .next-event .next-event-block .next-event-block__bottomleft {
+    width: 60px;
+    height: 60px;
+  }
+  .main .next-event .next-event-block .next-event-block__bottomright {
+    width: 60px;
+    height: 60px;
+  }
+  .main .next-event .next-event-block .next-event-block__day {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
+  .main .next-event .next-event-block .next-event-block__time {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+  .main .next-event .next-event-block .next-event-block__place {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+  .main .store .store-block {
+    width: 30%;
+    padding-top: 30px;
+    cursor: pointer;
+  }
+  .main .store .store-block .store-block__img {
+    height: 220px;
+    width: 100%;
+  }
+  .main .store .store-block .store-block__body {
+    margin-top: 5px;
+    width: 100%;
+  }
+  .main .store .store-block .store-block__body .store-block__name {
+    font-size: 1.1rem;
+  }
+  .main .store .store-block .store-block__body .store-block__text {
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

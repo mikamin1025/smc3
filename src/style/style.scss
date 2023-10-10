@@ -527,7 +527,7 @@ main
         // background-color: pink;
         width: 90%;
         height: 90vh;
-        
+
 
         & .store-detail__title {
           font-size: 1.5rem;
@@ -739,6 +739,121 @@ footer
       margin-top: 20px;
       margin-right: 20px;
     }
+  }
+
+}
+
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+}
+
+@media screen and (min-width: 960px) {
+
+  /* 960px以上に適用されるCSS（PC用） */
+  /*****************************************
+  main
+  *******************************************/
+  .main {
+    /*
+    共通設定
+    */
+    width: 70%;
+
+    & section {
+      padding-top: 100px;
+
+      & h2 {
+        font-size: 2.3rem;
+        padding-bottom: 30px;
+      }
+    }
+
+    // about----------------------------------------------------
+    & .about {
+      & .about-block {
+        display: flex;
+        justify-content: space-between;
+
+        & .about-block__text-block {
+          width: 40%;
+        }
+
+        & .about-block__img {
+          width: 50%;
+          height: 50vh;
+          margin-top: 30px;
+
+        }
+      }
+    }
+
+    // next event-----------------------------------------------
+    & .next-event {
+
+      & .next-event-block {
+        height: 30vh;
+        & .next-event-block__topleft {
+          width: 60px;
+          height: 60px;
+        }
+        & .next-event-block__topright {
+          width: 60px;
+          height: 60px;
+        }
+        & .next-event-block__bottomleft {
+          width: 60px;
+          height: 60px;
+        }
+        & .next-event-block__bottomright {
+          width: 60px;
+          height: 60px;
+        }
+        & .next-event-block__day {
+          font-size: 3.0rem;
+          margin-top: 50px;
+        }
+        & .next-event-block__time {
+          font-size: 1.3rem;
+          margin-top: 40px;
+        }
+        & .next-event-block__place {
+          font-size: 1.3rem;
+          margin-top: 40px;
+        }
+      }
+
+
+    }
+
+    // store-----------------------------------------------
+    & .store {
+      & .store-block {
+      width: 30%;
+      padding-top: 30px;
+      cursor: pointer;
+
+      & .store-block__img {
+        height: 220px;
+        width: 100%;
+      }
+      & .store-block__body {
+        margin-top: 5px;
+        width: 100%;
+
+        & .store-block__name {
+          font-size: 1.1rem;
+        }
+        & .store-block__text {
+          font-size: 0.7rem;
+          line-height: 1.3rem;
+        }
+      }
+      }
+
+
+    }
+
   }
 
 }
