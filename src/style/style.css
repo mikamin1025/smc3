@@ -617,6 +617,9 @@ footer
     共通設定
     */
     width: 70%;
+    /*
+    parking----------------------------------------------------
+    */
   }
   .main section {
     padding-top: 100px;
@@ -687,5 +690,82 @@ footer
   .main .store .store-block .store-block__body .store-block__text {
     font-size: 0.7rem;
     line-height: 1.3rem;
+  }
+  .main .parking h2 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .main .parking .parking__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .main .parking .parking__block .parking__img {
+    width: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+  .main .parking .parking__block .parking__detail-block {
+    width: 50%;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail {
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_left {
+    width: 20%;
+    border-bottom: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_left .parking__icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0 auto;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_left-first {
+    border-top: 1.5px solid #fff;
+    border-top-left-radius: 20px;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_left-last {
+    border-bottom-left-radius: 20px;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_right {
+    width: 70%;
+    border-right: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    display: flex;
+    align-items: center;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_right-first {
+    border-top: 1.5px solid #fff;
+    border-top-right-radius: 20px;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__box_right-last {
+    border-bottom-right-radius: 20px;
+  }
+  .main .parking .parking__block .parking__detail-block .parking__detail .parking__text {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 0;
+    padding: 5px 10px 5px 0;
+    text-align: left;
+    line-height: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */

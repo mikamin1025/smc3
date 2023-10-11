@@ -793,30 +793,37 @@ footer
 
       & .next-event-block {
         height: 30vh;
+
         & .next-event-block__topleft {
           width: 60px;
           height: 60px;
         }
+
         & .next-event-block__topright {
           width: 60px;
           height: 60px;
         }
+
         & .next-event-block__bottomleft {
           width: 60px;
           height: 60px;
         }
+
         & .next-event-block__bottomright {
           width: 60px;
           height: 60px;
         }
+
         & .next-event-block__day {
           font-size: 3.0rem;
           margin-top: 50px;
         }
+
         & .next-event-block__time {
           font-size: 1.3rem;
           margin-top: 40px;
         }
+
         & .next-event-block__place {
           font-size: 1.3rem;
           margin-top: 40px;
@@ -829,31 +836,127 @@ footer
     // store-----------------------------------------------
     & .store {
       & .store-block {
-      width: 30%;
-      padding-top: 30px;
-      cursor: pointer;
+        width: 30%;
+        padding-top: 30px;
+        cursor: pointer;
 
-      & .store-block__img {
-        height: 220px;
-        width: 100%;
-      }
-      & .store-block__body {
-        margin-top: 5px;
-        width: 100%;
-
-        & .store-block__name {
-          font-size: 1.1rem;
+        & .store-block__img {
+          height: 220px;
+          width: 100%;
         }
-        & .store-block__text {
-          font-size: 0.7rem;
-          line-height: 1.3rem;
+
+        & .store-block__body {
+          margin-top: 5px;
+          width: 100%;
+
+          & .store-block__name {
+            font-size: 1.1rem;
+          }
+
+          & .store-block__text {
+            font-size: 0.7rem;
+            line-height: 1.3rem;
+          }
         }
       }
-      }
-
-
     }
 
-  }
+    /*
+  parking----------------------------------------------------
+  */
+    & .parking {
 
+
+      & h2 {
+        padding-top: 30px;
+        padding-bottom: 50px;
+      }
+
+      & .parking__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
+
+        & .parking__img {
+          width: 50%;
+          object-fit: cover;
+          margin-bottom: 30px;
+          border-radius: $border-radius;
+        }
+
+        & .parking__detail-block {
+          width: 50%;
+
+          & .parking__detail {
+            display: flex;
+            width: 90%;
+            height: 100px;
+            margin: 0 auto;
+            color: #fff;
+
+            & .parking__box_left {
+              width: 20%;
+              border-bottom: 1.5px solid #fff;
+              border-left: 1.5px solid #fff;
+              text-align: center;
+              display: flex;
+              align-items: center;
+
+              & .parking__icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                line-height: 50px;
+                letter-spacing: 0;
+                text-align: center;
+                // margin: 0 5px 0 12px;
+                margin: 0 auto;
+                border: 1.5px solid #fff;
+                border-radius: 50%;
+
+              }
+            }
+
+            & .parking__box_left-first {
+              border-top: 1.5px solid #fff;
+              border-top-left-radius: $border-radius;
+            }
+
+            & .parking__box_left-last {
+              border-bottom-left-radius: $border-radius;
+            }
+
+            & .parking__box_right {
+              width: 70%;
+              border-right: 1.5px solid #fff;
+              border-bottom: 1.5px solid #fff;
+              display: flex;
+              align-items: center;
+            }
+
+            & .parking__box_right-first {
+              border-top: 1.5px solid #fff;
+              border-top-right-radius: $border-radius;
+            }
+
+            & .parking__box_right-last {
+              border-bottom-right-radius: $border-radius;
+            }
+
+            & .parking__text {
+              font-weight: 400;
+              font-size: 0.8rem;
+              margin-top: 0;
+              padding: 5px 10px 5px 0;
+              text-align: left;
+              line-height: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
