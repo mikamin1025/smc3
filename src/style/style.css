@@ -15,13 +15,16 @@ h2 {
 header
 ******************************************/
 .header {
-  /*========= スクロールダウンのためのCSS ===============*/
-  /*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
-  /*スクロールダウン全体の場所*/
-  /*下からの距離が変化して全体が下→上→下に動く*/
-  /*Scrollテキストの描写*/
-  /* 矢印の描写 */
-  /*========= レイアウトのためのCSS ===============*/
+  position: relative;
+}
+.header .header-top__title {
+  position: absolute;
+  color: #fff;
+  font-size: 5em;
+  z-index: 50;
+  left: 50%;
+  transform: translateX(-30%);
+  top: 45%;
 }
 .header .header-top {
   width: 100%;
@@ -40,16 +43,19 @@ header
   *----------------------------*/
   /* アニメーション前のメニューの状態 */
 }
-.header .header-top .header-top__title {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.7rem;
-  padding-left: 20px;
-  z-index: 50;
+.header .header-top .header-top__insta {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 200;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.header .header-top .header-top__insta a {
+  color: #fff;
 }
 .header .header-top .header-top__hamburger {
   position: relative;
+  margin-top: 8px;
   /*ボタン内側の基点となるためrelativeを指定*/
   cursor: pointer;
   width: 70px;
@@ -66,26 +72,25 @@ header
   position: absolute;
   left: 14px;
   height: 3px;
-  border-radius: 2px;
-  background: #125135;
+  background: #fff;
 }
 .header .header-top .header-top__hamburger span:nth-of-type(1) {
-  top: 15px;
-  width: 45%;
+  top: 10px;
+  width: 50%;
 }
 .header .header-top .header-top__hamburger span:nth-of-type(2) {
   top: 23px;
-  width: 35%;
+  width: 50%;
 }
 .header .header-top .header-top__hamburger span:nth-of-type(3) {
-  top: 31px;
-  width: 20%;
+  top: 36px;
+  width: 50%;
 }
 .header .header-top .header-top__hamburger.active span:nth-of-type(1) {
   top: 18px;
   left: 18px;
   transform: translateY(6px) rotate(-135deg);
-  width: 30%;
+  width: 50%;
 }
 .header .header-top .header-top__hamburger.active span:nth-of-type(2) {
   opacity: 0;
@@ -94,7 +99,7 @@ header
   top: 30px;
   left: 18px;
   transform: translateY(-6px) rotate(135deg);
-  width: 30%;
+  width: 0%;
 }
 .header .header-top .header-top__menu {
   position: fixed;
@@ -190,61 +195,6 @@ header
   z-index: 10;
   background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%);
 }
-.header .header-scrolldown {
-  /*描画位置※位置は適宜調整してください*/
-  position: absolute;
-  bottom: 1%;
-  right: 50%;
-  /*矢印の動き1秒かけて永遠にループ*/
-  animation: arrowmove 2s ease-in-out infinite;
-  z-index: 29;
-}
-@keyframes arrowmove {
-  0% {
-    bottom: 1%;
-  }
-  50% {
-    bottom: 3%;
-  }
-  100% {
-    bottom: 1%;
-  }
-}
-.header .header-scrolldown span {
-  /*描画位置*/
-  position: absolute;
-  left: -20px;
-  bottom: 10px;
-  /*テキストの形状*/
-  color: #125135;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  /*縦書き設定*/
-  writing-mode: vertical-rl;
-}
-.header .header-scrolldown:before {
-  content: "";
-  /*描画位置*/
-  position: absolute;
-  bottom: 0;
-  right: -6px;
-  /*矢印の形状*/
-  width: 1px;
-  height: 20px;
-  background-color: #125135;
-  transform: skewX(-31deg);
-}
-.header .header-scrolldown:after {
-  content: "";
-  /*描画位置*/
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  /*矢印の形状*/
-  width: 1px;
-  height: 50px;
-  background: #125135;
-}
 
 /*****************************************
 main
@@ -253,7 +203,7 @@ main
   /*
   共通設定
   */
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   /*
@@ -278,7 +228,7 @@ main
   margin-top: 50px;
 }
 .main section h2 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .main section p {

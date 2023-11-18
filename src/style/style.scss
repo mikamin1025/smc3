@@ -18,6 +18,18 @@ h2 {
 header
 ******************************************/
 .header {
+  position: relative;
+
+  & .header-top__title {
+    position: absolute;
+    color: #fff;
+    font-size: 5em;
+    z-index: 50;
+    left: 50%;
+    transform: translateX(-30%);
+    top: 45%;
+  }
+
   & .header-top {
     width: 100%;
     position: fixed;
@@ -25,20 +37,23 @@ header
     justify-content: space-between;
     z-index: 50;
 
-    & .header-top__title {
-      display: inline-block;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.7rem;
-      padding-left: 20px;
-      z-index: 50;
+    & .header-top__insta {
+      color: #fff;
+      font-size: 3em;
+      font-weight: 200;
+      margin-top: 10px;
+      margin-left: 10px;
 
-    }
+      & a {
+        color: #fff;
+      }
+    } 
 
     /*========= レイアウトのためのCSS ===============*/
     /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
     & .header-top__hamburger {
       position: relative;
+      margin-top: 8px;
       /*ボタン内側の基点となるためrelativeを指定*/
       cursor: pointer;
       width: 70px;
@@ -54,24 +69,24 @@ header
         position: absolute;
         left: 14px;
         height: 3px;
-        border-radius: 2px;
-        background: #125135;
+        // border-radius: 2px;
+        background: #fff;
       }
 
 
       & span:nth-of-type(1) {
-        top: 15px;
-        width: 45%;
+        top: 10px;
+        width: 50%;
       }
 
       & span:nth-of-type(2) {
         top: 23px;
-        width: 35%;
+        width: 50%;
       }
 
       & span:nth-of-type(3) {
-        top: 31px;
-        width: 20%;
+        top: 36px;
+        width: 50%;
       }
 
       /*activeクラスが付与されると線が回転して×になる*/
@@ -80,7 +95,7 @@ header
         top: 18px;
         left: 18px;
         transform: translateY(6px) rotate(-135deg);
-        width: 30%;
+        width: 50%;
       }
 
       &.active span:nth-of-type(2) {
@@ -91,7 +106,7 @@ header
         top: 30px;
         left: 18px;
         transform: translateY(-6px) rotate(135deg);
-        width: 30%;
+        width: 0%;
       }
     }
 
@@ -233,87 +248,6 @@ header
     z-index: 10;
     background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%)
   }
-
-  /*========= スクロールダウンのためのCSS ===============*/
-
-
-  /*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
-
-  /*スクロールダウン全体の場所*/
-  & .header-scrolldown {
-    /*描画位置※位置は適宜調整してください*/
-    position: absolute;
-    bottom: 1%;
-    right: 50%;
-    // right: 5%;
-    /*矢印の動き1秒かけて永遠にループ*/
-    animation: arrowmove 2.0s ease-in-out infinite;
-    z-index: 29;
-  }
-
-  /*下からの距離が変化して全体が下→上→下に動く*/
-  @keyframes arrowmove {
-    0% {
-      bottom: 1%;
-    }
-
-    50% {
-      bottom: 3%;
-    }
-
-    100% {
-      bottom: 1%;
-    }
-  }
-
-  /*Scrollテキストの描写*/
-  & .header-scrolldown span {
-    /*描画位置*/
-    position: absolute;
-    left: -20px;
-    bottom: 10px;
-    /*テキストの形状*/
-    // color: #333;
-    color: #125135;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    /*縦書き設定*/
-    -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
-  }
-
-  /* 矢印の描写 */
-  & .header-scrolldown:before {
-    content: "";
-    /*描画位置*/
-    position: absolute;
-    bottom: 0;
-    right: -6px;
-    /*矢印の形状*/
-    width: 1px;
-    height: 20px;
-    // background: #555;
-    background-color: #125135;
-    transform: skewX(-31deg);
-  }
-
-  & .header-scrolldown:after {
-    content: "";
-    /*描画位置*/
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    /*矢印の形状*/
-    width: 1px;
-    height: 50px;
-    // background: #555;
-    background: #125135;
-  }
-
-  /*========= レイアウトのためのCSS ===============*/
-
-
 }
 
 /*****************************************
@@ -323,7 +257,7 @@ main
   /*
   共通設定
   */
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 
@@ -331,7 +265,7 @@ main
     margin-top: 50px;
 
     & h2 {
-      font-size: 1.3rem;
+      font-size: 1.8rem;
       font-weight: 600;
     }
 
