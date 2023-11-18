@@ -3,12 +3,8 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "PT Sans Narrow", sans-serif;
-}
-
-h2 {
-  font-family: "FOT-筑紫ゴシック Pr5 R", TsukuGoPr5-R, 游ゴシック, YuGothic, "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 
 /*****************************************
@@ -228,7 +224,7 @@ main
   margin-top: 50px;
 }
 .main section h2 {
-  font-size: 1.4rem;
+  font-size: 2.3rem;
   font-weight: 600;
 }
 .main section p {
@@ -249,7 +245,9 @@ main
 .main .next-event h2 {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+}
+.main .next-event h3 {
+  padding-bottom: 20px;
 }
 .main .next-event p {
   text-align: center;
@@ -380,6 +378,7 @@ main
   background: #ede3da;
   overflow-y: scroll;
   overflow-x: hidden;
+  border: 1px solid #999;
 }
 .main .store .store-detail .store-detail-block {
   width: 90%;
@@ -391,6 +390,7 @@ main
   font-family: "FOT-筑紫ゴシック Pr5 R", TsukuGoPr5-R, 游ゴシック, YuGothic, "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 .main .store .store-detail .store-detail-block .store-detail-back {
+  text-align: right;
   padding-top: 10px;
   cursor: pointer;
   font-weight: 600;
@@ -457,6 +457,9 @@ main
 .main .parking h2 {
   color: #fff;
   padding-top: 30px;
+}
+.main .parking h3 {
+  color: #fff;
   padding-bottom: 30px;
 }
 .main .parking .parking__img {
